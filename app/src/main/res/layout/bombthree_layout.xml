@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/white_round_corner_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="提示"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:text="账号注册以后产生的工单信息可在此查看,如需要查询注册日以前的维护履历请咨询销售店" />
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="知道了"
+            android:padding="5dp"
+            android:textColor="@color/blue"
+            android:textSize="15dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

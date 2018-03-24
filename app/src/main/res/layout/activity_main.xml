@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/bomb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="弹框" />
+
+    <TextView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="日历" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/clip"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="画廊"/>
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/right"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="对号绘制"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/menu"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="水滴效果"/>
+
+</LinearLayout>
