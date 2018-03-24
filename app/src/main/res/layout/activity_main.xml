@@ -54,4 +54,14 @@
         android:layout_width="match_parent"
         android:text="水滴效果"/>
 
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/pst"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="输入框"/>
+
 </LinearLayout>

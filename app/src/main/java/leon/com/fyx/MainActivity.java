@@ -4,14 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView bomb, calendar, clip, right, menu;
+    private TextView bomb, calendar, clip, right, menu,pst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         bomb = (TextView) findViewById(R.id.bomb);
         bomb.setOnClickListener(new View.OnClickListener() {//弹框
@@ -46,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {//侧滑
                 startActivity(new Intent(MainActivity.this, LMenuActivity.class));
+            }
+        });
+        pst = (TextView) findViewById(R.id.pst);
+        pst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,InputActivity.class));
             }
         });
     }

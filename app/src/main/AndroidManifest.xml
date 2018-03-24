@@ -25,6 +25,7 @@
         <activity android:name=".CalendarActivity" />
         <activity android:name=".GalleryActivity" />
         <activity android:name=".PopActivity"/>
+        <activity android:name=".InputActivity" />
     </application>
 
 </manifest>

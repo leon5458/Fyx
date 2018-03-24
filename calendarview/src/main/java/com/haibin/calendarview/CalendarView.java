@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 package com.haibin.calendarview;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
@@ -27,10 +26,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
-
 import java.lang.reflect.Constructor;
 import java.util.List;
-
 /**
  * 日历布局
  * 各个类使用包权限，避免不必要的public
@@ -664,10 +661,10 @@ public class CalendarView extends FrameLayout {
      * @param weekBackground 背景色
      * @param weekTextColor  字体颜色
      */
-    public void setWeeColor(int weekBackground, int weekTextColor) {
-        mWeekBar.setBackgroundColor(weekBackground);
-        mWeekBar.setTextColor(weekTextColor);
-    }
+//    public void setWeeColor(int weekBackground, int weekTextColor) {
+//        mWeekBar.setBackgroundColor(weekBackground);
+//        mWeekBar.setTextColor(weekTextColor);
+//    }
 
 
     /**

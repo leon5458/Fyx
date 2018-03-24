@@ -31,6 +31,11 @@ compile 'com.github.Othershe:NiceDialog:1.1.4'
 自定义的一个WaterHorizontalLoader ,放在view文件下面,
 下面是使用效果图  
 ![water](https://github.com/leon5458/Fyx/blob/master/img/water.gif)  
+### 输入框：  
+  自定义view psttext在view 里面
+  效果图如下  
+  input
+![](https://github.com/leon5458/Fyx/blob/master/img/input.gif)
 
  
  

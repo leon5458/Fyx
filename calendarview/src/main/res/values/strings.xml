@@ -1,7 +1,19 @@
 <resources>
     <string name="app_name">CalendarView</string>
     <string-array name="lunar_first_of_month">
-        <item>春节</item>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+       <!-- <item>春节</item>
         <item>二月</item>
         <item>三月</item>
         <item>四月</item>
@@ -12,7 +24,7 @@
         <item>九月</item>
         <item>十月</item>
         <item>冬月</item>
-        <item>腊月</item>
+        <item>腊月</item>-->
     </string-array>
 
     <string-array name="tradition_festival">
@@ -26,6 +38,41 @@
     </string-array>
 
     <string-array name="lunar_str">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+
+
+     </string-array>
+
+<!--    <string-array name="lunar_str">
         <item>初一</item>
         <item>初二</item>
         <item>初三</item>
@@ -56,7 +103,7 @@
         <item>廿八</item>
         <item>廿九</item>
         <item>三十</item>
-    </string-array>
+    </string-array>-->
 
     <string-array name="solar_festival">
         <item>0101元旦</item>
@@ -77,6 +124,36 @@
     </string-array>
 
     <string-array name="solar_term">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+
+
+    </string-array>
+
+<!--    <string-array name="solar_term">
         <item>春分</item>
         <item>清明</item>
         <item>谷雨</item>
@@ -101,7 +178,7 @@
         <item>立春</item>
         <item>雨水</item>
         <item>惊蛰</item>
-    </string-array>
+    </string-array>-->
 
     <string-array name="western_festival">
 
