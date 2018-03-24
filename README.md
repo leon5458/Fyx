@@ -5,7 +5,7 @@ compile 'com.github.Othershe:NiceDialog:1.1.4'
 按钮下的弹框使用的popwindow,只看到一个弹框就使用原生的写的,如果想更多的使用
 可以引用easypopup,
 实例效果图:  
-![tankuang]{https://github.com/leon5458/Fyx/blob/master/img/tankuang.gif}    
+![tankuang](https://github.com/leon5458/Fyx/blob/master/img/tankuang.gif)    
 
 
 ### 日历:   
