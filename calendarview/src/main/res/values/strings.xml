@@ -27,7 +27,7 @@
         <item>腊月</item>-->
     </string-array>
 
-    <!--  <string-array name="tradition_festival">
+      <string-array name="tradition_festival">
          <item>除夕</item>
          <item>0101春节</item>
          <item>0115元宵</item>
@@ -35,7 +35,7 @@
          <item>0707七夕</item>
          <item>0815中秋</item>
          <item>0909重阳</item>
-     </string-array>-->
+     </string-array>
 
      <string-array name="lunar_str">
          <item/>
@@ -105,7 +105,7 @@
          <item>三十</item>
      </string-array>-->
 
-    <!--  <string-array name="solar_festival">
+     <string-array name="solar_festival">
          <item>0101元旦</item>
          <item>0214情人节</item>
          <item>0308妇女节</item>
@@ -121,7 +121,7 @@
          <item>1001国庆节</item>
          <item>1224平安夜</item>
          <item>1225圣诞节</item>
-     </string-array>-->
+     </string-array>
      <!--
          <string-array name="solar_term">
              <item/>

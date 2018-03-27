@@ -53,7 +53,15 @@ public class SimpleWeekView extends WeekView {
         float baselineY = mTextBaseLine;
         int top = -mItemHeight / 6;
         int cx = x + mItemWidth / 2;
-        if (TextUtils.isEmpty(calendar.getSolarTerm())){
+        if (!TextUtils.isEmpty(calendar.getTraditionFestival())){
+            drawText(canvas,calendar,x,hasScheme,isSelected,cx,top);
+
+        }else if (!TextUtils.isEmpty(calendar.getGregorianFestival())){
+            drawText(canvas,calendar,x,hasScheme,isSelected,cx,top);
+
+        }else if (!TextUtils.isEmpty(calendar.getSolarTerm())){
+            drawText(canvas,calendar,x,hasScheme,isSelected,cx,top);
+        }else{
             if (isSelected) {
                 canvas.drawText(String.valueOf(calendar.getDay()),
                         cx,
@@ -73,24 +81,26 @@ public class SimpleWeekView extends WeekView {
                         calendar.isCurrentDay() ? mCurDayTextPaint :
                                 calendar.isCurrentMonth() ? mCurMonthTextPaint : mCurMonthTextPaint);
             }
-        }else{
-            if (isSelected) {
-                canvas.drawText(String.valueOf(calendar.getDay()), cx, mTextBaseLine + top,
-                        mSelectTextPaint);
-                canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + mItemHeight / 10, mSelectedLunarTextPaint);
-            } else if (hasScheme) {
-                canvas.drawText(String.valueOf(calendar.getDay()), cx, mTextBaseLine + top,
-                        calendar.isCurrentMonth() ? mSchemeTextPaint : mOtherMonthTextPaint);
+        }
+    }
 
-                canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + mItemHeight / 10, mSchemeLunarTextPaint);
-            } else {
-                canvas.drawText(String.valueOf(calendar.getDay()), cx, mTextBaseLine + top,
-                        calendar.isCurrentDay() ? mCurDayTextPaint :
-                                calendar.isCurrentMonth() ? mCurMonthTextPaint : mOtherMonthTextPaint);
-                canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + mItemHeight / 10,
-                        calendar.isCurrentDay() ? mCurDayLunarTextPaint :
-                                calendar.isCurrentMonth() ? mCurMonthLunarTextPaint : mOtherMonthLunarTextPaint);
-            }
+    private void drawText(Canvas canvas, Calendar calendar, int x, boolean hasScheme, boolean isSelected,int cx,int top){
+        if (isSelected) {
+            canvas.drawText(String.valueOf(calendar.getDay()), cx, mTextBaseLine + top,
+                    mSelectTextPaint);
+            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + mItemHeight / 10, mSelectedLunarTextPaint);
+        } else if (hasScheme) {
+            canvas.drawText(String.valueOf(calendar.getDay()), cx, mTextBaseLine + top,
+                    calendar.isCurrentMonth() ? mSchemeTextPaint : mOtherMonthTextPaint);
+
+            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + mItemHeight / 10, mSchemeLunarTextPaint);
+        } else {
+            canvas.drawText(String.valueOf(calendar.getDay()), cx, mTextBaseLine + top,
+                    calendar.isCurrentDay() ? mCurDayTextPaint :
+                            calendar.isCurrentMonth() ? mCurMonthTextPaint : mOtherMonthTextPaint);
+            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + mItemHeight / 10,
+                    calendar.isCurrentDay() ? mCurDayLunarTextPaint :
+                            calendar.isCurrentMonth() ? mCurMonthLunarTextPaint : mOtherMonthLunarTextPaint);
         }
     }
 }
