@@ -27,133 +27,134 @@
         <item>腊月</item>-->
     </string-array>
 
-    <string-array name="tradition_festival">
-        <item>除夕</item>
-        <item>0101春节</item>
-        <item>0115元宵</item>
-        <item>0505端午</item>
-        <item>0707七夕</item>
-        <item>0815中秋</item>
-        <item>0909重阳</item>
-    </string-array>
+    <!--  <string-array name="tradition_festival">
+         <item>除夕</item>
+         <item>0101春节</item>
+         <item>0115元宵</item>
+         <item>0505端午</item>
+         <item>0707七夕</item>
+         <item>0815中秋</item>
+         <item>0909重阳</item>
+     </string-array>-->
 
-    <string-array name="lunar_str">
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
+     <string-array name="lunar_str">
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
+         <item/>
 
 
-     </string-array>
+      </string-array>
 
-<!--    <string-array name="lunar_str">
-        <item>初一</item>
-        <item>初二</item>
-        <item>初三</item>
-        <item>初四</item>
-        <item>初五</item>
-        <item>初六</item>
-        <item>初七</item>
-        <item>初八</item>
-        <item>初九</item>
-        <item>初十</item>
-        <item>十一</item>
-        <item>十二</item>
-        <item>十三</item>
-        <item>十四</item>
-        <item>十五</item>
-        <item>十六</item>
-        <item>十七</item>
-        <item>十八</item>
-        <item>十九</item>
-        <item>二十</item>
-        <item>廿一</item>
-        <item>廿二</item>
-        <item>廿三</item>
-        <item>廿四</item>
-        <item>廿五</item>
-        <item>廿六</item>
-        <item>廿七</item>
-        <item>廿八</item>
-        <item>廿九</item>
-        <item>三十</item>
-    </string-array>-->
+ <!--    <string-array name="lunar_str">
+         <item>初一</item>
+         <item>初二</item>
+         <item>初三</item>
+         <item>初四</item>
+         <item>初五</item>
+         <item>初六</item>
+         <item>初七</item>
+         <item>初八</item>
+         <item>初九</item>
+         <item>初十</item>
+         <item>十一</item>
+         <item>十二</item>
+         <item>十三</item>
+         <item>十四</item>
+         <item>十五</item>
+         <item>十六</item>
+         <item>十七</item>
+         <item>十八</item>
+         <item>十九</item>
+         <item>二十</item>
+         <item>廿一</item>
+         <item>廿二</item>
+         <item>廿三</item>
+         <item>廿四</item>
+         <item>廿五</item>
+         <item>廿六</item>
+         <item>廿七</item>
+         <item>廿八</item>
+         <item>廿九</item>
+         <item>三十</item>
+     </string-array>-->
 
-    <string-array name="solar_festival">
-        <item>0101元旦</item>
-        <item>0214情人节</item>
-        <item>0308妇女节</item>
-        <item>0312植树节</item>
-        <item>0315消权日</item>
-        <item>0401愚人节</item>
-        <item>0501劳动节</item>
-        <item>0504青年节</item>
-        <item>0601儿童节</item>
-        <item>0701建党节</item>
-        <item>0801建军节</item>
-        <item>0910教师节</item>
-        <item>1001国庆节</item>
-        <item>1224平安夜</item>
-        <item>1225圣诞节</item>
-    </string-array>
+    <!--  <string-array name="solar_festival">
+         <item>0101元旦</item>
+         <item>0214情人节</item>
+         <item>0308妇女节</item>
+         <item>0312植树节</item>
+         <item>0315消权日</item>
+         <item>0401愚人节</item>
+         <item>0501劳动节</item>
+         <item>0504青年节</item>
+         <item>0601儿童节</item>
+         <item>0701建党节</item>
+         <item>0801建军节</item>
+         <item>0910教师节</item>
+         <item>1001国庆节</item>
+         <item>1224平安夜</item>
+         <item>1225圣诞节</item>
+     </string-array>-->
+     <!--
+         <string-array name="solar_term">
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
+             <item/>
 
+
+         </string-array>
+
+         -->
     <string-array name="solar_term">
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-
-
-    </string-array>
-
-<!--    <string-array name="solar_term">
         <item>春分</item>
         <item>清明</item>
         <item>谷雨</item>
@@ -178,7 +179,7 @@
         <item>立春</item>
         <item>雨水</item>
         <item>惊蛰</item>
-    </string-array>-->
+    </string-array>
 
     <string-array name="western_festival">
 

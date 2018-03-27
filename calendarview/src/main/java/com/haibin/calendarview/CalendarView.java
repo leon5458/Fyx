@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 package com.haibin.calendarview;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
@@ -26,8 +27,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
+
 import java.lang.reflect.Constructor;
 import java.util.List;
+
 /**
  * 日历布局
  * 各个类使用包权限，避免不必要的public
@@ -91,7 +94,7 @@ public class CalendarView extends FrameLayout {
         FrameLayout frameContent = (FrameLayout) findViewById(R.id.frameContent);
         this.mWeekPager = (WeekViewPager) findViewById(R.id.vp_week);
         this.mWeekPager.setup(mDelegate);
-   
+
         if (TextUtils.isEmpty(mDelegate.getWeekBarClass())) {
             this.mWeekBar = new WeekBar(getContext());
         } else {
@@ -239,8 +242,6 @@ public class CalendarView extends FrameLayout {
     public int getCurYear() {
         return mDelegate.getCurrentDay().getYear();
     }
-
-
 
 
     /**
@@ -396,17 +397,18 @@ public class CalendarView extends FrameLayout {
     /**
      * 滚动到下一周
      */
-    public void scrollToNextWeek(){
+    public void scrollToNextWeek() {
         scrollToNextWeek(false);
     }
 
     private void scrollToNextWeek(boolean smoothScroll) {
         mWeekPager.setCurrentItem(mWeekPager.getCurrentItem() + 1, smoothScroll);
     }
+
     /**
      * 滚动上一周
      */
-    public void scrollToPreWeek(){
+    public void scrollToPreWeek() {
         scrollToPreWeek(false);
     }
 
@@ -434,8 +436,12 @@ public class CalendarView extends FrameLayout {
 //        } else {
 //            mMonthPager.setCurrentItem(mMonthPager.getCurrentItem() + 1, smoothScroll);
 //        }
-        mWeekPager.setCurrentItem(mWeekPager.getCurrentItem() + 4, smoothScroll);
-
+//        mWeekPager.get
+//        mWeekPager.setCurrentItem(mWeekPager.getCurrentItem() + 4, smoothScroll);
+        Calendar calendar = mDelegate.mSelectedCalendar;
+        if (calendar!=null){
+            scrollToCalendar(calendar.getYear(), calendar.getMonth() + 1, calendar.getDay());
+        }
     }
 
     /**
@@ -457,7 +463,11 @@ public class CalendarView extends FrameLayout {
 //        } else {
 //            mMonthPager.setCurrentItem(mMonthPager.getCurrentItem() - 1, smoothScroll);
 //        }
-        mWeekPager.setCurrentItem(mWeekPager.getCurrentItem() - 4, smoothScroll);
+//        mWeekPager.setCurrentItem(mWeekPager.getCurrentItem() - 4, smoothScroll);
+        Calendar calendar = mDelegate.mSelectedCalendar;
+        if (calendar!=null){
+            scrollToCalendar(calendar.getYear(), calendar.getMonth() - 1, calendar.getDay());
+        }
     }
 
     /**
@@ -647,12 +657,13 @@ public class CalendarView extends FrameLayout {
 
     /**
      * 设置年视图的颜色
+     *
      * @param yearViewMonthTextColor 年视图月份颜色
-     * @param yearViewDayTextColor 年视图天的颜色
+     * @param yearViewDayTextColor   年视图天的颜色
      * @param yarViewSchemeTextColor 年视图标记颜色
      */
-    public void setYearViewTextColor(int yearViewMonthTextColor, int yearViewDayTextColor, int yarViewSchemeTextColor){
-        mDelegate.setYearViewTextColor(yearViewMonthTextColor,yearViewDayTextColor,yarViewSchemeTextColor);
+    public void setYearViewTextColor(int yearViewMonthTextColor, int yearViewDayTextColor, int yarViewSchemeTextColor) {
+        mDelegate.setYearViewTextColor(yearViewMonthTextColor, yearViewDayTextColor, yarViewSchemeTextColor);
     }
 
     /**

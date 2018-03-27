@@ -134,7 +134,7 @@ public final class CalendarLayout extends LinearLayout {
      */
     private void initCalendarPosition(Calendar cur) {
         java.util.Calendar date = java.util.Calendar.getInstance();
-        date.set(cur.getYear(), cur.getMonth() - 1, 1);
+        date.set(cur.getYear(), cur.getMonth() - 1, cur.getDay());
         int diff = date.get(java.util.Calendar.DAY_OF_WEEK) - 1;//月第一天为星期几,星期天 == 0,则偏移几天
         int size = diff + cur.getDay() - 1;
         setSelectPosition(size);

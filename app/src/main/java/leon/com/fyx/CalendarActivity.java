@@ -5,21 +5,18 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.haibin.calendarview.Calendar;
 import com.haibin.calendarview.CalendarView;
+
 import java.util.Arrays;
 
 import leon.com.fyx.adapter.FyxRecyclerAdapter;
-
 import leon.com.fyx.utils.ItemOffsetDecoration;
 import leon.com.fyx.utils.WViewHolder;
 
@@ -34,7 +31,7 @@ import leon.com.fyx.utils.WViewHolder;
 public class CalendarActivity extends AppCompatActivity implements CalendarView.OnDateSelectedListener,
         CalendarView.OnMonthChangeListener,
         CalendarView.OnYearChangeListener,
-        CalendarView.OnDateLongClickListener{
+        CalendarView.OnDateLongClickListener {
 
     private CalendarView mCalendarView;
     private TextView mTextYear;
@@ -81,7 +78,6 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
         });
 
 
-
         mCalendarView = (CalendarView) findViewById(R.id.calendarView);
         mTextYear = (TextView) findViewById(R.id.year);
         mTextMouth = (TextView) findViewById(R.id.mouth);
@@ -96,8 +92,7 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
         mCalendarView.setOnMonthChangeListener(this);
         mCalendarView.setOnDateLongClickListener(this);
 
-        mTextYear.setText(mCalendarView.getCurYear() + "年");
-        mTextMouth.setText(mCalendarView.getCurMonth() + "月");
+
         last_week.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,13 +108,13 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
         last_mouth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              mCalendarView.scrollToPre();
+                mCalendarView.scrollToPre();
             }
         });
         next_mouth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              mCalendarView.scrollToNext();
+                mCalendarView.scrollToNext();
             }
         });
 
@@ -171,9 +166,8 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
                 });
             }
         });
-
-
-
+        mTextYear.setText(mCalendarView.getCurYear() + "年");
+        mTextMouth.setText(mCalendarView.getCurMonth() + "月");
     }
 
     private void initData() {
@@ -188,12 +182,13 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
 
     @Override
     public void onMonthChange(int year, int month) {
-
+//        mTextYear.setText(year+ "年");
+//        mTextMouth.setText(month -1+ "月");
     }
 
     @Override
     public void onDateSelected(Calendar calendar, boolean isClick) {
-        mTextYear.setText(calendar.getYear() + "年" );
+        mTextYear.setText(calendar.getYear() + "年");
         mTextMouth.setText(calendar.getMonth() + "月");
         if (isClick) {
             Toast.makeText(this, getCalendarText(calendar), Toast.LENGTH_SHORT).show();
@@ -202,13 +197,12 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
     }
 
 
-
     @Override
     public void onDateLongClick(Calendar calendar) {
     }
 
     private static String getCalendarText(Calendar calendar) {
-        return String.format(calendar.getMonth() + "月" + calendar.getDay() + "日");
+        return String.format(calendar.getMonth()+ "月" + calendar.getDay() + "日");
     }
 
 }

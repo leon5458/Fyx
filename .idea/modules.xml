@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Fyx.iml" filepath="$PROJECT_DIR$/Fyx.iml" />
+      <module fileurl="file://E:\pro\Fyx\Fyx.iml" filepath="E:\pro\Fyx\Fyx.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\pro\Fyx\app\app.iml" filepath="E:\pro\Fyx\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/calendarview/calendarview.iml" filepath="$PROJECT_DIR$/calendarview/calendarview.iml" />
+      <module fileurl="file://E:\pro\Fyx\calendarview\calendarview.iml" filepath="E:\pro\Fyx\calendarview\calendarview.iml" />
     </modules>
   </component>
 </project>
