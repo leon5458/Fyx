@@ -7,6 +7,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -121,18 +122,26 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
         moring = (TextView) findViewById(R.id.moring);
         afternoon = (TextView) findViewById(R.id.afternoon);
         moring.setBackgroundResource(R.drawable.gray_drawable);
-        afternoon.setBackgroundResource(R.drawable.white_smalldrawable);
-
+        moring.setTextColor(getResources().getColor(R.color.white));
+        afternoon.setTextColor(getResources().getColor(R.color.blue));
         moring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 moring.setBackgroundResource(R.drawable.gray_drawable);
-                afternoon.setBackgroundResource(R.drawable.white_smalldrawable);
+                moring.setTextColor(getResources().getColor(R.color.white));
+                afternoon.setTextColor(getResources().getColor(R.color.blue));
+                afternoon.setBackgroundResource(0);
                 FyxRecyclerAdapter adapter = new FyxRecyclerAdapter(CalendarActivity.this, R.layout.recy_time_item, Arrays.asList(moringtime));
                 recyclerView.setAdapter(adapter);
                 adapter.setCallBack(new FyxRecyclerAdapter.CallBack() {
                     @Override
                     public <T> void convert(WViewHolder holder, T bean, int position) {
+                        TextView hint = (TextView) holder.getView(R.id.item_hint);
+                        FrameLayout rootlayout = (FrameLayout) holder.getView(R.id.item_rootlayout);
+                        TextView name = (TextView) holder.getView(R.id.time_text);
+                        hint.setText(position % 2==0 ? "" : "闲");
+                        rootlayout.setBackgroundResource(position % 2 == 0 ? R.drawable.shape_round_black : R.drawable.shape_round_gray);
+                        name.setTextColor(position % 2 == 0?getResources().getColor(R.color.black):getResources().getColor(R.color.gray));
                         holder.setText(R.id.time_text, (String) bean);
                     }
                 });
@@ -149,7 +158,9 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
             @Override
             public void onClick(View view) {
                 afternoon.setBackgroundResource(R.drawable.gray_drawable);
-                moring.setBackgroundResource(R.drawable.white_smalldrawable);
+                moring.setBackgroundResource(0);
+                afternoon.setTextColor(getResources().getColor(R.color.white));
+                moring.setTextColor(getResources().getColor(R.color.blue));
                 FyxRecyclerAdapter adapter = new FyxRecyclerAdapter(CalendarActivity.this, R.layout.recy_time_item, Arrays.asList(afternoontime));
                 recyclerView.setAdapter(adapter);
                 adapter.setCallBack(new FyxRecyclerAdapter.CallBack() {
@@ -202,7 +213,7 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView.
     }
 
     private static String getCalendarText(Calendar calendar) {
-        return String.format(calendar.getMonth()+ "月" + calendar.getDay() + "日");
+        return String.format(calendar.getMonth() + "月" + calendar.getDay() + "日");
     }
 
 }
